@@ -281,7 +281,7 @@ Partial Class students
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"ALL", "QUALIFIED", "NON QUALIFIED"})
+        Me.ComboBox1.Items.AddRange(New Object() {"ALL", "QUALIFIED", "PLACED"})
         Me.ComboBox1.Location = New System.Drawing.Point(680, 411)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)

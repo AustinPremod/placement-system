@@ -1,0 +1,26 @@
+Try
+
+                Dim con As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Joshua\Desktop\jmusicals.mdb"
+                Dim connection As New OleDbConnection(con)
+                connection.Open()
+                Dim cmd As New OleDb.OleDbCommand("INSERT INTO item VALUES)
+                cmd.ExecuteNonQuery()
+                MsgBox("student Registered Successfully")
+                connection.Close()
+                	
+
+            Catch ex As Exception
+                MsgBox("An Error connecting Database  :" & vbCrLf & ex.Message)
+            End Try
+
+
+
+
+
+
+
+
+
+
+
+select *,cname c from stud s,company c where s.10th = c.10th marks AND s.no 

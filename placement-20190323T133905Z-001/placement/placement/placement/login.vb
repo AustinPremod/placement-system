@@ -27,13 +27,13 @@ Public Class login
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim Mail As New MailMessage
         Mail.Subject = "test email"
-        Mail.To.Add("placementsystem123@gmail.com") 'input email id of the resever
-        Mail.From = New MailAddress("placementsystem123@gmail.com") 'input your email 
+        Mail.To.Add("placementsystem123@gmail.com")
+        Mail.From = New MailAddress("placementsystem123@gmail.com")
         Mail.Body = "YOUR USERNAME IS : user1 AND YOUR PASSWORD IS : pass1"
 
         Dim SMTP As New SmtpClient("smtp.gmail.com")
         SMTP.EnableSsl = True
-        SMTP.Credentials = New System.Net.NetworkCredential("placementsystem123", "password") 'input your email and password 
+        SMTP.Credentials = New System.Net.NetworkCredential("placementsystem123", "Austin!998")
 
         SMTP.Send(Mail)
     End Sub

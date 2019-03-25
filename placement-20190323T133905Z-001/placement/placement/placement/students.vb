@@ -87,13 +87,13 @@ Public Class students
                 Dim Command As String
                 Dim connection As New OleDbConnection(con)
 
-                Command = "select * from student s,company c where s.tenth >= c.tenthmk and s.twelth >=c.twelthmk and s.mark >=c.mark and s.noarrears <= c.noarrears and s.placed ='n'"
+                Command = "select distinct s.* from student s,company c where s.tenth >= c.tenthmk and s.twelth >=c.twelthmk and s.mark >=c.mark and s.noarrears <= c.noarrears and s.placed ='n'"
                 da = New OleDbDataAdapter(Command, connection)
                 da.Fill(dt)
                 StudentDataGridView.DataSource = dt
             Catch ex As Exception
             End Try
-        ElseIf ComboBox1.Text = "NON QUALIFIED" Then
+        ElseIf ComboBox1.Text = "PLACED" Then
             Try
                 Dim con As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Database.accdb"
                 Dim ds As New DataSet
@@ -102,7 +102,7 @@ Public Class students
                 ds.Tables.Add(dt)
                 Dim Command As String
                 Dim connection As New OleDbConnection(con)
-                Command = "select *  from student s,company c where s.tenth < c.tenthmk and s.twelth < c.twelthmk and s.mark < c.mark and s.noarrears < c.noarrears or s.placed ='y'"
+                Command = "select * from student where placed ='y'"
                 da = New OleDbDataAdapter(Command, connection)
                 da.Fill(dt)
                 StudentDataGridView.DataSource = dt
